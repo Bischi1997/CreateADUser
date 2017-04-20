@@ -89,7 +89,7 @@ Function Set-OUPath{
     $Users = Import-Csv -Path $Global:UserCSV
     #No Employee info
     if($Company -eq ""){
-        Write-Log "There is no Company mentioned. Please check TOPdesk entry."
+        Write-Log "There is no Company mentioned. Please check your CSV entry under 'Company'."
         exit
     }
     #Internal Employees
