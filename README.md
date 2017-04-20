@@ -1,5 +1,5 @@
 # CreateADUser
-Creates AD User with the help of a HTML/PHP Website and a Powershell Script.
+Creates AD User with the help of a Simple HTML/PHP Website and a Powershell Script.
 
 Powershell:
 - Modules:
