@@ -5,6 +5,8 @@ Import-Module SkypeForBusiness -ErrorAction SilentlyContinue
 
 #VARIABLES
 ###########################################################################################
+#Credentials
+    $Global:Credentials = Get-Credential
 
 #Paths
     #Put in work dir path
@@ -48,6 +50,7 @@ Import-Module SkypeForBusiness -ErrorAction SilentlyContinue
     $Global:SMTPServer = ""
 
 #Server
+    #eg: srv-001.example.com
     $Global:ADServer = ""
     $Global:SfBServer = ""
     $Global:ExchangeServer = ""
@@ -219,7 +222,7 @@ Function Create-SfBAccount{
                     Write-Log "SfB Enterprise Voice Account enabled for User $DisplayName"
 
                     #Import Module from Exchange Server (https://thoughtsofanidlemind.com/2010/09/29/connecting-to-exchange-2010-with-powershell/)
-                    $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri "http://vsrv-283.pkintra.net/PowerShell/?SerializationLevel=Full" -Credential <#$Global:Credentials#> –Authentication Kerberos
+                    $ExSession = New-PSSession –ConfigurationName Microsoft.Exchange –ConnectionUri "http://$Global:ExchangeServer/PowerShell/?SerializationLevel=Full" -Credential $Global:Credentials –Authentication Kerberos
                     Import-PSSession $ExSession
                         $MailboxStatus = [bool](Get-Mailbox $UserPID)
                         if($MailboxStatus -eq "True"){
