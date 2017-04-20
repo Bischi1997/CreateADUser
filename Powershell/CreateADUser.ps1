@@ -20,6 +20,7 @@ Import-Module SkypeForBusiness -ErrorAction SilentlyContinue
     $Global:SmartcardLogonRequired = $true
     $Password = "" | ConvertTo-SecureString -AsPlainText -Force
     $Global:AccountPassword = $Password
+    $Global:CompanyName = ""
 
     #OU Information, for adding in Active Directory
     $OUAdminsInt = "OU=Admins,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
@@ -92,7 +93,7 @@ Function Set-OUPath{
         exit
     }
     #Internal Employees
-    if($Company -like "Pensionskasse*"){
+    if($Company -like "$Global:CompanyName*"){
         if($UserPID -like "s*"){
             $Global:Path = $OUAdminsInt
             Write-Log "$UserPID will be added in OU $Global:Path"
@@ -107,7 +108,7 @@ Function Set-OUPath{
         }
     }
     #External Employees
-    if($Company -notlike "Pensionskasse*"){
+    if($Company -notlike "$Global:CompanyName*"){
         if($UserPID -like "s*"){
             $Global:Path = $OUAdminsExt
             Write-Log "$UserPID will be added in OU $Global:Path"
