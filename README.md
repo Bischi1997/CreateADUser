@@ -7,11 +7,10 @@ Powershell:
   - If SfB is used: Skype for Business Module
 - Additional Information must be filled in, or the script won't work:
 
-```
-Variable  | Description
-------------- | -------------
-$temp| add the path, where the script and users.csv file is stored
-$Global:UserCSV| this is the name and path of the users.csv file
+|Variable  | Description|
+|------------- | -------------|
+|$temp| add the path, where the script and users.csv file is stored|
+|$Global:UserCSV| this is the name and path of the users.csv file|
 ```
   - $Global:Homedrive: here you can change the homedrive pathletter (e.g. H:)
   - $Global:HomedirectoryDefault: here you can add the Homedrivepath for each user (e.g. \\example.com\homedrives\%username%)
