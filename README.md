@@ -11,13 +11,11 @@ Powershell:
   - $Global:Homedrive: here you can change the homedrive pathletter (e.g. H:)
   - $Global:HomedirectoryDefault: here you can add the Homedrivepath for each user (e.g. \\example.com\homedrives\%username%)
   - $Global:ProfileDefault: here you can add the profilepath for each user (e.g. \\example.com\profiles\%username%)
-  -  $Global:SmartcardLogonRequired = $true
-    $Password = "" | ConvertTo-SecureString -AsPlainText -Force
-    $Global:AccountPassword = $Password
-
-    #OU Information, for adding in Active Directory
-    $OUAdminsInt = "OU=Admins,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
-    $OUEmployeeInt = "OU=Users,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
+  - $Global:SmartcardLogonRequired: Valid Values are $true or $False
+  - $Password: Here you can change the default password for the created users
+  - User PID must contain an "s" as admin and an "a" as user. External Employees must have an "u" in PID
+    - $OUAdminsInt: Here you can change the Organizational Unit for "s"-users
+    - $OUEmployeeInt = "OU=Users,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
     $OUAdminsExt = "OU=Admins,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
     $OUEmployeeExt = "OU=Externe,OU=Users,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
 
