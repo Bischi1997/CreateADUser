@@ -10,10 +10,11 @@ Creates AD User with the help of a Simple HTML/PHP Website and a Powershell Scri
 - index.html, styles.css, create_csv.php and users.csv in same directory
 
 ## Powershell: ##
-- Modules:
-  - Active Directory Module
-  - If SfB is used: Skype for Business Module
-- Additional Information must be filled in, or the script won't work:
+Modules:
+- Active Directory Module
+- If SfB is used: Skype for Business Module
+
+### Additional Information must be filled in, or the script won't work: ###
 
 |Variable                       | Description|
 |-------------                  | -------------|
