@@ -9,4 +9,4 @@ Powershell:
 Webserver:
 - Apache or Nginx
 - PHP enabled
-- index.html, create_csv.php and users.csv in same directory
+- index.html, styles.css, create_csv.php and users.csv in same directory
