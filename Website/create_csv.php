@@ -6,10 +6,12 @@
 	$firma = $_POST['firma'];
 	$abteilung = $_POST['abteilung'];
 	$telnummer = $_POST['telnummer'];
+	$SfB = $_POST['SfB'];
+	$eVoice = $_POST['eVoice'];
 	
 	$list = array (
-		array('Vorname','Name','PID','Firma','Abteilung','Telnummer'),
-		array($vorname,$name,$pid,$firma,$abteilung,$telnummer),
+		array('Vorname';'Name';'PID';'Firma';'Abteilung';'Telnummer';'SfB';'eVoice'),
+		array($vorname;$name;$pid;$firma;$abteilung;$telnummer;$SfB;$eVoice),
 	);
 
 	$fp = fopen('users.csv', 'w');
