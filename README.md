@@ -23,17 +23,11 @@ Powershell:
   - $Global:SIPDomain: here you have to add the SIP-Domain of your SfB installation
   - $Global:UMMailboxPolicy: This is different in every Company, you as administrator should know this.
   - $LogFile: Here you can change the path of your logfile (e.g. "$temp\log.txt")
-
-#Email for Logging
-    $Global:EmailLog = ""
-    $Global:SMTPServer = ""
-
-#Server
-    #eg: srv-001.example.com
-    $Global:ADServer = ""
-    $Global:SfBServer = ""
-    $Global:ExchangeServer = ""
-
+  - $Global:EmailLog: Here you can add an email-account (e.g. createaduser@example.com)
+  - $Global:SMTPServer: Here you have to add your smtp server (e.g. smtp.example.com)
+  - $Global:ADServer: This must be your Active Directory Server (e.g. srv-001.example.com)
+  - $Global:SfBServer: This must be your Skype for Business Server (e.g. srv-002.example.com)
+  - $Global:ExchangeServer: This must be your Exchange Server (e.g. srv-003.example.com)
   
 Webserver:
 - Apache or Nginx
