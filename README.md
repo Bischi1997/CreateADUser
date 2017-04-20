@@ -1,8 +1,14 @@
 # CreateADUser
 Creates AD User with the help of a Simple HTML/PHP Website and a Powershell Script.
 
-Overall:
+Attention:
 - User PID must contain an "s" as admin and an "a" as user. External Employees must have an "u" in PID
+
+Webserver:
+- Apache or Nginx
+- PHP enabled
+- index.html, styles.css, create_csv.php and users.csv in same directory
+
 Powershell:
 - Modules:
   - Active Directory Module
@@ -32,8 +38,3 @@ Powershell:
 |$Global:ADServer               | This must be your Active Directory Server (e.g. srv-001.example.com)|
 |$Global:SfBServer              | This must be your Skype for Business Server (e.g. srv-002.example.com)|
 |$Global:ExchangeServer         | This must be your Exchange Server (e.g. srv-003.example.com)|
-  
-Webserver:
-- Apache or Nginx
-- PHP enabled
-- index.html, styles.css, create_csv.php and users.csv in same directory
