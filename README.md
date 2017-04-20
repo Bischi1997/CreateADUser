@@ -19,16 +19,10 @@ Powershell:
     - $OUEmployeeInt: Here you can change the Organizational Unit for "a"-users
     - $OUAdminsExt: Here you can change the Organizational Unit for "s"-users who are externals
     - $OUEmployeeExt: Here you can change the Organizational Unit for "u"-users
-
-    #Suffix for User Principal Name
-    $Global:UPNSuffix "@example.com"
-
-#SfB Information
-    $Global:SIPDomain = ""
-    $Global:UMMailboxPolicy = ""
-    
-#Logging
-    $LogFile = "$temp\log.txt"
+  - $Global:UPNSuffix: Here you change your UPNSuffix (e.g. "@example.com")
+  - $Global:SIPDomain: here you have to add the SIP-Domain of your SfB installation
+  - $Global:UMMailboxPolicy: This is different in every Company, you as administrator should know this.
+  - $LogFile: Here you can change the path of your logfile (e.g. "$temp\log.txt")
 
 #Email for Logging
     $Global:EmailLog = ""
