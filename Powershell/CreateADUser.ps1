@@ -21,7 +21,7 @@ Import-Module SkypeForBusiness -ErrorAction SilentlyContinue
     $Password = "" | ConvertTo-SecureString -AsPlainText -Force
     $Global:AccountPassword = $Password
 
-    #OU INformation, for adding in Active Directory
+    #OU Information, for adding in Active Directory
     $OUAdminsInt = "OU=Admins,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
     $OUEmployeeInt = "OU=Users,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
     $OUAdminsExt = "OU=Admins,OU=UserAccounts,OU=Persons,OU=example,DC=example,DC=com"
@@ -35,10 +35,10 @@ Import-Module SkypeForBusiness -ErrorAction SilentlyContinue
     $Global:UMMailboxPolicy = ""
 
 #Errorhandling
-    #ADUser erstellung
+    #ADUser creation
     $NumberofUsers = 0
     $NumberofErrors = 0
-    #SfBUser erstellung
+    #SfBUser creation
     $NumberofSfBUsers = 0
     $NumberofSfBErrors = 0
 
