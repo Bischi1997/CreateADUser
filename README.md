@@ -2,7 +2,7 @@
 Creates AD User with the help of a Simple HTML/PHP Website and a Powershell Script.
 
 ## Attention: ##
-- This script should only be used in an intranet environement, since this can be a security risk!
+- This script should only be used in an intranet environement, since this can be a security risk when wrongly configured!
 - User PID must contain an "s" as admin and an "a" as user. External Employees must have an "u" in PID
 
 ## Webserver: ##
