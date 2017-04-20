@@ -17,7 +17,7 @@ Powershell:
 |$Global:SmartcardLogonRequired| Valid Values are $true or $False|
 |$Password| Here you can change the default password for the created users|
 |$Global:CompanyName| Here you can add the name of your Company (must be the same you fill in for internal users on the website!)|
-||User PID must contain an "s" as admin and an "a" as user. External Employees must have an "u" in PID|
+|User PID must contain an "s" as admin and an "a" as user. External Employees must have an "u" in PID|
     - $OUAdminsInt: Here you can change the Organizational Unit for "s"-users who are internals
     - $OUEmployeeInt: Here you can change the Organizational Unit for "a"-users
     - $OUAdminsExt: Here you can change the Organizational Unit for "s"-users who are externals
